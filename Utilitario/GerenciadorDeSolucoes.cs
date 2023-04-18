@@ -19,5 +19,10 @@ namespace AdministrativoByteBank.Utilitario
         {
             this.BeneficiacaoTotal += d.GetBonificacao();
         }
+
+        public double GetBonificacao() 
+        {
+            return this.BeneficiacaoTotal;
+        }
     }
 }
