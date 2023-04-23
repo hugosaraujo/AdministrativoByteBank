@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdministrativoByteBank.Funcionarios
 {
-    public class Funcionario
+    public abstract class Funcionario
     {
         public string Nome { get; set; }
         public string Cpf { get; private set; }
@@ -19,22 +19,13 @@ namespace AdministrativoByteBank.Funcionarios
             this.Cpf = cpf;
             this.Salario = salario;
             TotalDeFuncionarios++;
-            Console.WriteLine("Criando um funcionário");
+            //Console.WriteLine("Criando um funcionário");
         }
-        public virtual double GetBonificacao ()
-        {   
-            return this.Salario * 0.10;
-        }
+        public abstract double GetBonificacao();
 
-        public virtual double PremiacaoSemestral() 
-        {
-            return this.Salario * 0.20;
-        }
+        public abstract double PremiacaoSemestral();
 
-        public virtual void AcrescimoDeSalario()
-        {
-            this.Salario *= 1.10; 
-        }
+        public abstract void AcrescimoDeSalario();
     
     }
 }

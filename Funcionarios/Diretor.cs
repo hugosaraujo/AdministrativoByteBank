@@ -14,11 +14,11 @@ namespace AdministrativoByteBank.Funcionarios
         }
         public override double GetBonificacao()
         {
-            return this.Salario + base.GetBonificacao();
+            return this.Salario *= 0.50;
         }
         public override double PremiacaoSemestral()
         {
-            return this.Salario + base.PremiacaoSemestral();
+            return this.Salario *= 1;
         }
         public override void AcrescimoDeSalario()
         {
