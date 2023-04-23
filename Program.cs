@@ -1,4 +1,5 @@
 ﻿using AdministrativoByteBank.Funcionarios;
+using AdministrativoByteBank.SistemaInterno;
 using AdministrativoByteBank.Utilitario;
 using System.ComponentModel;
 using System.Data.Common;
@@ -34,6 +35,8 @@ using System.Data.Common;
 //Console.WriteLine($"Novo salário do Josep: R${string.Format("{0:00.00}", cg.Salario)}");
 //Console.WriteLine($"Novo salário do Carlos Gilberto: R${string.Format("{0:00.00}", pep.Salario)}");
 #endregion
+
+UsarSistema();
 void CalcularBonificacao()
 {
     GerenciadorDeSolucoes gerenciador = new GerenciadorDeSolucoes();
@@ -59,10 +62,25 @@ void CalcularBonificacao()
     //Console.WriteLine($"Total pago em bonificações pela empresa: " +
     //    $" R$ {String.Format("{0:00.00}", gerenciador.BeneficiacaoTotal)}")
 
-    Auxiliar.
-
 }
 
+void UsarSistema()
+{
+    SistemaInterno sistema = new SistemaInterno();
+
+    Diretor lj = new Diretor("89189810");
+    lj.Nome = "LeBron Raymone James Sr.";
+    lj.Senha = "236";
+
+    GerenteDeContas rui = new GerenteDeContas("7871891");
+    rui.Nome = "Rui Hachimura";
+    rui.Senha = "828";
+
+    sistema.Logar(lj, "236");
+    sistema.Logar(rui, "288");
+
+    Console.WriteLine();
+}
 
 
 

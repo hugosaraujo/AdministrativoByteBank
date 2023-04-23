@@ -21,5 +21,10 @@ namespace AdministrativoByteBank.Funcionarios
         {
             this.Salario *= 1.11;
         }
+
+        public override double PremiacaoSemestral()
+        {
+            return this.Salario *= 0.11;
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace AdministrativoByteBank.Funcionarios
 {
     public class Diretor:Funcionario
     {
+        public string Senha { get; set; }
         public Diretor(string cpf):base(cpf, 5000)
         {
             //Console.WriteLine("Criando um diretor");
@@ -23,6 +25,11 @@ namespace AdministrativoByteBank.Funcionarios
         public override void AcrescimoDeSalario()
         {
             this.Salario *= 1.15; 
+        }
+
+        public bool Autenticar(string senha)
+        {
+            return this.Senha == senha; 
         }
 
     }
