@@ -8,7 +8,6 @@ namespace AdministrativoByteBank.Funcionarios
 {
     public class GerenteDeContas:Funcionario
     {
-        public string Senha { get; set; }
         public GerenteDeContas(string cpf):base(cpf, 4000)
         {
             
@@ -27,10 +26,6 @@ namespace AdministrativoByteBank.Funcionarios
         public override double PremiacaoSemestral()
         {
             return this.Salario *= 0.25;
-        }
-        public bool Autenticar(string senha)
-        {
-            return this.Senha == senha;
         }
     }
 }

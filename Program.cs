@@ -76,10 +76,18 @@ void UsarSistema()
     rui.Nome = "Rui Hachimura";
     rui.Senha = "828";
 
+    Auxiliar enrique = new Auxiliar("166897");
+    enrique.Nome = "Luiz Enrique Martinez Garcia";
+    enrique.Senha = "987";
+
+    Designer xana = new Designer("212108");
+    xana.Nome = "Xana Martinez Garcia";
+    xana.Senha = "2113";
+
     sistema.Logar(lj, "236");
     sistema.Logar(rui, "288");
-
-    Console.WriteLine();
+    sistema.Logar(enrique, "978");
+    sistema.Logar(xana, "2113");
 }
 
 

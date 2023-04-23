@@ -13,6 +13,7 @@ namespace AdministrativoByteBank.Funcionarios
         public string Cpf { get; private set; }
         public double Salario { get; protected set; }
         public static int TotalDeFuncionarios { get; private set; }
+        public string Senha { get; set; }
 
         public Funcionario(string cpf, double salario)
         {
@@ -26,6 +27,12 @@ namespace AdministrativoByteBank.Funcionarios
         public abstract double PremiacaoSemestral();
 
         public abstract void AcrescimoDeSalario();
-    
+
+        public bool Autenticar(string senha)
+        {
+            return this.Senha == senha;
+        }
+
+
     }
 }

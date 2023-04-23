@@ -9,7 +9,6 @@ namespace AdministrativoByteBank.Funcionarios
 {
     public class Diretor:Funcionario
     {
-        public string Senha { get; set; }
         public Diretor(string cpf):base(cpf, 5000)
         {
             //Console.WriteLine("Criando um diretor");
@@ -26,11 +25,5 @@ namespace AdministrativoByteBank.Funcionarios
         {
             this.Salario *= 1.15; 
         }
-
-        public bool Autenticar(string senha)
-        {
-            return this.Senha == senha; 
-        }
-
     }
 }
