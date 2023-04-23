@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdministrativoByteBank.SistemaInterno;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AdministrativoByteBank.Funcionarios
 {
-    public class Diretor:Funcionario
+    public class Diretor:Autenticacao
     {
         public Diretor(string cpf):base(cpf, 5000)
         {
@@ -24,6 +25,11 @@ namespace AdministrativoByteBank.Funcionarios
         public override void AcrescimoDeSalario()
         {
             this.Salario *= 1.15; 
+        }
+
+        public override bool Autenticar(string senha)
+        {
+            return this.Senha == senha;
         }
     }
 }

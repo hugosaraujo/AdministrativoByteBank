@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdministrativoByteBank.SistemaInterno;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdministrativoByteBank.Funcionarios
 {
-    public class GerenteDeContas:Funcionario
+    public class GerenteDeContas:Autenticacao
     {
         public GerenteDeContas(string cpf):base(cpf, 4000)
         {
@@ -26,6 +27,11 @@ namespace AdministrativoByteBank.Funcionarios
         public override double PremiacaoSemestral()
         {
             return this.Salario *= 0.25;
+        }
+
+        public override bool Autenticar(string senha)
+        {
+            return this.Senha == senha;
         }
     }
 }
