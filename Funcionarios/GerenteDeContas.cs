@@ -29,7 +29,12 @@ namespace AdministrativoByteBank.Funcionarios
             return this.Salario *= 0.25;
         }
 
-        public override bool Autenticar(string senha)
+        public override bool AutenticarUsuario(string usuario)
+        {
+            return this.Usuario == usuario;
+        }
+
+        public override bool AutenticarSenha(string senha)
         {
             return this.Senha == senha;
         }

@@ -7,3 +7,5 @@
 	- herança; 
 	- utilização de comandos virtual e override; 
 	- conceito de base class; 
+	- inclusão de classes abstratas; 
+	- herança múltipla; 

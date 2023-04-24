@@ -3,6 +3,7 @@ using AdministrativoByteBank.SistemaInterno;
 using AdministrativoByteBank.Utilitario;
 using System.ComponentModel;
 using System.Data.Common;
+using System.Reflection.Emit;
 
 
 #region
@@ -71,13 +72,15 @@ void UsarSistema()
     Diretor lj = new Diretor("89189810");
     lj.Nome = "LeBron Raymone James Sr.";
     lj.Senha = "236";
+    lj.Usuario = "king.james";
 
     GerenteDeContas rui = new GerenteDeContas("7871891");
     rui.Nome = "Rui Hachimura";
     rui.Senha = "828";
+    rui.Usuario = "rui_hachimura";
 
-    sistema.Logar(lj, "236");
-    sistema.Logar(rui, "288");
+    sistema.Logar(lj, "king.james", "236");
+    sistema.Logar(rui, "rui_hachimura", "288");
 
 }
 
