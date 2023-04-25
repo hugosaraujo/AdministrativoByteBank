@@ -21,8 +21,17 @@ namespace AdministrativoByteBank.SistemaInterno
             }
             else
             {
-                Console.WriteLine("Não foi possível reconhecer senha ou usuário. Por favor, tente novamente...");
-                return false; 
+                if(!usuarioAutenticado) 
+                {
+                    Console.WriteLine("Usuário inválido");
+                    return false;
+                } 
+                else 
+                {
+                    
+                    Console.WriteLine("Senha inválida");
+                    return false;
+                }
             }
         }
     }

@@ -80,7 +80,7 @@ void UsarSistema()
     rui.Usuario = "rui_hachimura";
 
     sistema.Logar(lj, "king.james", "236");
-    sistema.Logar(rui, "rui_hachimura", "288");
+    sistema.Logar(rui, "rui_hachimura", "888");
 
 }
 
