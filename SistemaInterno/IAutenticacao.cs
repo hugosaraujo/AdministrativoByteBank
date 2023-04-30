@@ -7,15 +7,13 @@ using System.Threading.Tasks;
 
 namespace AdministrativoByteBank.SistemaInterno
 {
-    public abstract class Autenticacao:Funcionario
+    public interface IAutenticacao
     {
-        public string Usuario { get; set; }
-        public string Senha { get; set; }
+        public string Usuario { get; protected set; }
+        public string Senha { get; protected set; }
         public abstract bool AutenticarUsuario(string usuario);
         public abstract bool AutenticarSenha(string senha);
 
-        protected Autenticacao(string cpf, double salario) : base(cpf, salario)
-        {
-        }
+
     }
 }

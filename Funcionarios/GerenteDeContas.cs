@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdministrativoByteBank.Funcionarios
 {
-    public class GerenteDeContas:Autenticacao
+    public class GerenteDeContas:FuncionarioAutenticavel
     {
         public GerenteDeContas(string cpf):base(cpf, 4000)
         {
@@ -29,14 +29,5 @@ namespace AdministrativoByteBank.Funcionarios
             return this.Salario *= 0.25;
         }
 
-        public override bool AutenticarUsuario(string usuario)
-        {
-            return this.Usuario == usuario;
-        }
-
-        public override bool AutenticarSenha(string senha)
-        {
-            return this.Senha == senha;
-        }
     }
 }

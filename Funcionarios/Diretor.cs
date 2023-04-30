@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace AdministrativoByteBank.Funcionarios
 {
-    public class Diretor:Autenticacao
+    public class Diretor:FuncionarioAutenticavel
     {
-
         public Diretor(string cpf):base(cpf, 5000)
         {
             //Console.WriteLine("Criando um diretor");
@@ -26,16 +25,6 @@ namespace AdministrativoByteBank.Funcionarios
         public override void AcrescimoDeSalario()
         {
             this.Salario *= 1.15; 
-        }
-
-        public override bool AutenticarUsuario(string usuario)
-        {
-            return this.Usuario == usuario;
-        }
-
-        public override bool AutenticarSenha(string senha) 
-        {
-            return this.Senha == senha; 
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AdministrativoByteBank.Funcionarios;
+using AdministrativoByteBank.Parceiros;
 using AdministrativoByteBank.SistemaInterno;
 using AdministrativoByteBank.Utilitario;
 using System.ComponentModel;
@@ -79,8 +80,13 @@ void UsarSistema()
     rui.Senha = "828";
     rui.Usuario = "rui_hachimura";
 
+    ParceiroComercial kl = new ParceiroComercial("kyle.lowry7", "777");
+    kl.Usuario = "kyle.lowry7";
+    kl.Senha = "777";
+
     sistema.Logar(lj, "king.james", "236");
     sistema.Logar(rui, "rui_hachimura", "888");
+    sistema.Logar(kl, "kyle.lowry7", "777");
 
 }
 
