@@ -10,8 +10,8 @@ namespace AdministrativoByteBank.Parceiros
 {
     public class ParceiroComercial : IAutenticacao
     {
-        public string Usuario { get ; set ; }
-        public string Senha { get ; set ; }
+        public string Usuario { get ; private set ; }
+        public string Senha { get ; private set ; }
 
         public ParceiroComercial(string usuario, string senha)
         {

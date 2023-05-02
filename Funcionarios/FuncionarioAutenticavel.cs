@@ -9,10 +9,10 @@ namespace AdministrativoByteBank.Funcionarios
 {
     public abstract class FuncionarioAutenticavel : Funcionario, IAutenticacao
     {
-        public string Usuario { get; set; }
-        public string Senha { get; set; }
+        public string Usuario { get; private set; }
+        public string Senha { get; private set; }
 
-        protected FuncionarioAutenticavel(string cpf, double salario) : base(cpf, salario)
+        protected FuncionarioAutenticavel(string cpf, double salario, string usuario, string senha) : base(cpf, salario)
         {
         }
 

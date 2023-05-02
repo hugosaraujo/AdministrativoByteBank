@@ -9,7 +9,7 @@ namespace AdministrativoByteBank.Funcionarios
 {
     public class GerenteDeContas:FuncionarioAutenticavel
     {
-        public GerenteDeContas(string cpf):base(cpf, 4000)
+        public GerenteDeContas(string cpf, string usuario, string senha ):base(cpf, 4000, usuario, senha)
         {
             
         }

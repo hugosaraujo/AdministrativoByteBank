@@ -39,6 +39,7 @@ using System.Reflection.Emit;
 #endregion
 
 UsarSistema();
+
 void CalcularBonificacao()
 {
     GerenciadorDeSolucoes gerenciador = new GerenciadorDeSolucoes();
@@ -56,13 +57,13 @@ void CalcularBonificacao()
 
     r.Nome = "Roni Medeiros de Moura";
 
-    //gerenciador.Registrar(gz);
-    //gerenciador.Registrar(t);
-    //gerenciador.Registrar(fs);
-    //gerenciador.Registrar(r);
+    gerenciador.Registrar(gz);
+    gerenciador.Registrar(t);
+    gerenciador.Registrar(fs);
+    gerenciador.Registrar(r);
 
-    //Console.WriteLine($"Total pago em bonificações pela empresa: " +
-    //    $" R$ {String.Format("{0:00.00}", gerenciador.BeneficiacaoTotal)}")
+    Console.WriteLine($"Total pago em bonificações pela empresa: " +
+        $" R$ {String.Format("{0:00.00}", gerenciador.BeneficiacaoTotal)}");
 
 }
 
@@ -70,19 +71,13 @@ void UsarSistema()
 {
     SistemaInterno sistema = new SistemaInterno();
 
-    Diretor lj = new Diretor("89189810");
+    Diretor lj = new Diretor("89189810", "king.james", "236");
     lj.Nome = "LeBron Raymone James Sr.";
-    lj.Senha = "236";
-    lj.Usuario = "king.james";
 
-    GerenteDeContas rui = new GerenteDeContas("7871891");
+    GerenteDeContas rui = new GerenteDeContas("7871891", "rui_hachimura", "828");
     rui.Nome = "Rui Hachimura";
-    rui.Senha = "828";
-    rui.Usuario = "rui_hachimura";
 
     ParceiroComercial kl = new ParceiroComercial("kyle.lowry7", "777");
-    kl.Usuario = "kyle.lowry7";
-    kl.Senha = "777";
 
     sistema.Logar(lj, "king.james", "236");
     sistema.Logar(rui, "rui_hachimura", "888");

@@ -10,7 +10,7 @@ namespace AdministrativoByteBank.Funcionarios
 {
     public class Diretor:FuncionarioAutenticavel
     {
-        public Diretor(string cpf):base(cpf, 5000)
+        public Diretor(string cpf, string usuario, string senha ):base(cpf, 5000, usuario, senha)
         {
             //Console.WriteLine("Criando um diretor");
         }

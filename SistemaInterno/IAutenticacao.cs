@@ -9,8 +9,6 @@ namespace AdministrativoByteBank.SistemaInterno
 {
     public interface IAutenticacao
     {
-        public string Usuario { get; protected set; }
-        public string Senha { get;  protected set; }
         public bool AutenticarUsuario(string usuario);
         public bool AutenticarSenha(string senha);
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdministrativoByteBank.Bonificacao;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -7,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace AdministrativoByteBank.Funcionarios
 {
-    public abstract class Funcionario
+    public abstract class Funcionario : IBonificacao
     {
         public string Nome { get; set; }
         public string Cpf { get; private set; }
-        public double Salario { get; protected set; }
+        public double Salario { get; set; }
         public static int TotalDeFuncionarios { get; private set; }
 
         public Funcionario(string cpf, double salario)
@@ -21,6 +22,11 @@ namespace AdministrativoByteBank.Funcionarios
             TotalDeFuncionarios++;
             //Console.WriteLine("Criando um funcionário");
         }
+
+        protected Funcionario()
+        {
+        }
+
         public abstract double GetBonificacao();
 
         public abstract double PremiacaoSemestral();
